@@ -8,6 +8,10 @@
     font-weight:500;
 }
 
+:root{
+    --small-font:20px
+}
+
 .main-container{
     height:100vh;
     display: grid;
@@ -66,7 +70,7 @@
     height: 30px;
 }
 
-.header-container .profile-small{
+.profile-small{
     height: 50px;
 }
 
@@ -121,12 +125,12 @@ button{
     grid-row:2/3;
     grid-column:2/3;
     display: grid;
-    grid-template-columns: 2.5fr 300px;
+    grid-template-columns: 3fr 250px;
     grid-template-rows: 1fr 6fr 1fr 6fr;
     padding:0px 25px;
-    padding-bottom: 50px;
+    padding-bottom: 35px;
     gap: 5px;
-    overflow: auto;     /* not working*/
+    overflow: auto;    
 }
 
 .project-header,
@@ -145,10 +149,22 @@ button{
     margin-right:10px;
 }
 
-.project-cards>*{
+.project-cards .card{
     background-color: white;
     border: 1px solid white;
     border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.project-cards .card .links{
+    grid-row: 3/4;
+    display: flex;
+    justify-content: end;
+}
+
+.project-cards img{
+    height: 35px;
 }
 
 .announ-content,
@@ -156,7 +172,45 @@ button{
     border:1px solid white;
     border-radius: 10px;
     background-color: white;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: repeate(4,1fr);
+    gap: 5px 0px;
+    overflow: auto;
 }
+
+.announ-content div{
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.announ-content p{
+    font-size: 15px;
+}
+
+.trend-content > div{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: start;
+}
+
+.trend-content p{
+    font-size: 15px;
+}
+
+.trend-content div .text{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trend-content div .title{
+    font-weight: 300;
+    grid-row: 2/3;
+}
+
+
+
+
+
 
 
 
